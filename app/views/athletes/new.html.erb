@@ -1,0 +1,16 @@
+<h1>Add Athlete</h1>
+<%= form_with(model: @athlete, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true, placeholder: "last Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :sport %>
+    <%= f.text_field :sport %>
+  </div>
+  <%= f.submit class:"waves-effect waves-light btn" %>
+<% end %>

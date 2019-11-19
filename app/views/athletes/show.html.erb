@@ -1,0 +1,8 @@
+<h1><%= @athlete.first_name @athlete.last_name %></h1>
+<hr />
+<p>What would you like to do?</p>
+
+<br />
+<%= link_to 'Edit Athlete', edit_athlete_path(@athlete) %>
+<br />
+<%= link_to 'Delete Athlete', @athlete, method: :delete %>
