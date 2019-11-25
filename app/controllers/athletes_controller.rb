@@ -11,21 +11,21 @@ class AthletesController < ApplicationController
 
   def new
     @athlete = Athlete.new
-    render partial: "form"
+    
   end
 
-  def create
-    @athlete = current_user.athletes.new(athlete_params)
-    if @athlete.save
-      redirect_to athletes_path
-    else
-      render :new
+    def create
+      @athlete = current_user.athletes.new(athlete_params)
+      if @athlete.save
+        redirect_to athletes_path
+      else
+        render :new
+      end
     end
-  end
 
-  def edit
-    render partial: "form"
-  end
+    def edit
+    end
+  
 
   def update
     if @athlete.update(athlete_params)

@@ -2,11 +2,13 @@
 <h2>Welcome <%= current_user.first_name %></h2>
 <hr />
 <%= link_to "Add Athletes", new_athlete_path %>
+
 <h3>Your Athletes</h3>
 <ul>
   <% @athletes.each do |athlete| %>
     <li>
-     
+    <%=athlete.full_name %> -- $<%= athlete.sport %><%= link_to "remove Athlete", 
+    
     </li>
   <% end %>
 </ul>

@@ -1,14 +1,14 @@
-<h1><%= @athlete.id ? 'Edit Athlete' : 'Create Athlete' %></h1>
+<h1><%= @athlete.id ? 'Edit Athlete' : 'New  Athlete' %></h1>
 <hr />
 <%= form_for @athlete do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name, required: true, autofocus: true %>
-  < br / >
+  
   <%= f.label :last_name %>
   <%= f.text_field :last_name, required: true, autofocus: true %>
-  < br / >
+  
   <%= f.label :sport %>
-  <%= f.text_field :name, required: true, autofocus: true %>
-  < br / >
+  <%= f.text_field :sport, required: true, autofocus: true %>
+  
   <%= f.submit class:"waves-effect waves-light btn" %>
 <% end %>
